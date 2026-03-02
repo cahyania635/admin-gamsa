@@ -9,7 +9,7 @@ const allowedOrigins = [
   // Tambahkan origin game server lokal di sini, misalnya:
   // 'http://localhost:8080',
   // 'http://192.168.x.x:port',
-  'http://localhost:50000/',
+  'http://localhost:50000',
 ];
 
 function getCorsHeaders(origin: string | null) {
