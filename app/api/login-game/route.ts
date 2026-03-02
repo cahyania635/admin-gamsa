@@ -4,6 +4,11 @@ import bcrypt from 'bcryptjs';
 
 export const dynamic = 'force-dynamic';
 
+// Handle CORS preflight
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204 });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { username, password } = await request.json();

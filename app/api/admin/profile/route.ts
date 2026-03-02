@@ -4,6 +4,11 @@ import bcrypt from 'bcryptjs';
 
 export const dynamic = 'force-dynamic';
 
+// Handle CORS preflight
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204 });
+}
+
 // GET — Ambil data admin (tanpa password)
 export async function GET() {
   try {
